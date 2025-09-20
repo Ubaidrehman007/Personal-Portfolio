@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+<!-- AOS Library for Scroll Animations -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- JS Libraries -->
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init();
+</script>
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111111;
+    }
+
+    .nav-link:hover {
+      color: #dc3545 !important;
+    }
+
+    .section {
+      padding: 60px 15px;
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+
+    .profile-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+      .social-icons {
+        margin-left: 0 !important;
+        text-align: center;
+      }
+
+      .social-icons a {
+        margin: 0 10px;
+      }
+    }
+
+
+  .blinking-cursor {
+    font-weight: 100;
+    font-size: 2rem;
+    color: #dc3545;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%   { opacity: 1; }
+    50%  { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+
+
+  </style>
+</head>
+
+<body>
+
+ <!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-black sticky-top">
+  <div class="container">
+
+    <!-- Brand Photo + Name -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="images/ubaid.jpg" alt="Ubaid" class="rounded-circle me-2" 
+           style="height: 48px; width: 48px; object-fit: cover;" />
+      <span class="text-danger fw-bold">Ubaid </span> Rehman
+    </a>
+
+    <!-- Toggle for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item "><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item "><a class="nav-link active" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<!-- Navbar End -->
+
+ <!-- Hero Section Start -->
+<section class="section bg-black text-light" id="home">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Text -->
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right" data-aos-duration="1200">
+        <h5 class="mb-3">Hi There! I'm</h5>
+        <h1 class="fw-bold text-danger">
+          <span id="typed-text"></span><span class="blinking-cursor">|</span>
+        </h1>
+        <p class="mt-3 text-light text-justify">
+          I'm a passionate Full Stack Developer currently pursuing B.Tech in Computer Science & Engineering. Skilled in Java, HTML, CSS, and JS — aiming to become a full-time Software Engineer with a drive for clean design and efficient code.
+        </p>
+        <a href="Ubaid Rehman Resume.pdf" class="btn btn-outline-danger fw-semibold mt-3">Download CV</a>
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="profile-pic">
+          <img src="images/ubaid.jpg" alt="Ubaid Rehman" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Profile Pic Styling */
+.profile-pic {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 6px solid #dc3545; /* Red theme border */
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(220, 53, 69, 0.5);
+  animation: floatPic 4s ease-in-out infinite;
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Animation */
+@keyframes floatPic {
+  0%, 100% {
+    transform: translateY(0);
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.6);
+  }
+  50% {
+    transform: translateY(-12px);
+    box-shadow: 0 0 35px rgba(220, 53, 69, 0.9);
+  }
+}
+</style>
+
+
+<!-- About Me Section Start -->
+<section class="section text-light" id="about" style="background-color: #111111;">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5" data-aos="fade-down" data-aos-duration="1200">
+      <h1 class="fw-bold text-danger section-title">ABOUT ME</h1>
+      <p class="mt-3">Professional Profile – All About Me</p>
+    </div>
+
+    <div class="row align-items-center gy-4">
+      
+      <!-- Left Image -->
+      <div class="col-lg-4 text-center" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="about-pic">
+          <img src="images/ubaid.jpg" alt="Ubaid Rehman" class="img-fluid">
+        </div>
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-lg-8" data-aos="fade-left" data-aos-duration="1200">
+        <h2 class="text-light">I'm <span class="text-danger border-animate">Ubaid Rehman</span></h2>
+        <p class="text-light mt-4 text-justify">
+          I am a passionate and dedicated B.Tech student pursuing Computer Science & Engineering, currently developing my skills as a Java developer and working toward becoming a full-time Software Engineer. Proficient in HTML, CSS, and JavaScript, I'm on the journey to mastering full stack development with a focus on clean code and user-friendly design.
+        </p>
+
+        <!-- Info Grid -->
+        <div class="row mt-4">
+          <div class="col-md-6 text-light" data-aos="fade-up" data-aos-delay="100">
+            <p><i class="fa-solid fa-calendar-days text-danger bounce-icon"></i> DOB: 1 June 2003</p>
+            <p><i class="fa-solid fa-globe text-danger bounce-icon"></i> Languages: English, Hindi, Urdu</p>
+            <p><i class="fa-solid fa-location-dot text-danger bounce-icon"></i> Location: Lucknow, India</p>
+          </div>
+          <div class="col-md-6 text-light" data-aos="fade-up" data-aos-delay="200">
+            <p><i class="fa-solid fa-flag text-danger bounce-icon"></i> Nationality: Indian</p>
+            <p><i class="fa-solid fa-phone-volume text-danger bounce-icon"></i> Phone: +91 9772255268</p>
+            <p><i class="fa-solid fa-envelope text-danger bounce-icon"></i> Email: urkhan556@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Title with Animated Underline */
+.section-title {
+  display: inline-block;
+  position: relative;
+  border-bottom: 2px solid #dc3545;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -6px;
+  background: #dc3545;
+  transition: width 0.5s ease;
+}
+.section-title:hover::after {
+  width: 100%;
+}
+
+/* About Image Styling */
+.about-pic {
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 6px solid #dc3545;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(220, 53, 69, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.about-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(220, 53, 69, 0.9);
+}
+
+/* Border animation under name */
+.border-animate {
+  position: relative;
+}
+.border-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #dc3545;
+  transition: width 0.4s ease;
+}
+.border-animate:hover::after {
+  width: 100%;
+}
+
+/* Icon Bounce Animation */
+.bounce-icon {
+  display: inline-block;
+  margin-right: 8px;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+</style>
+
+<!-- About Me Section End -->
+
+
+<!-- Services Section -->
+<section class="section text-light" id="services" style="background-color: #111111; position: relative; overflow: hidden;">
+  <div class="container text-center">
+    <h1 class="fw-bold text-danger mb-4" data-aos="fade-down" data-aos-duration="1000">SERVICES</h1>
+    <p class="mb-5" data-aos="fade-up" data-aos-duration="1200">What I can do for you — clean code, responsive design, and full-stack solutions.</p>
+    
+    <div class="row g-4">
+      <!-- Service Card -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="card service-card bg-dark text-light shadow-lg rounded-4 p-4 h-100">
+          <i class="fa-solid fa-code fs-1 text-danger mb-3 service-icon"></i>
+          <h5 class="fw-bold">Web Development</h5>
+          <p>Modern responsive websites using HTML, CSS, JS, Bootstrap, and Thymeleaf.</p>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1200">
+        <div class="card service-card bg-dark text-light shadow-lg rounded-4 p-4 h-100">
+          <i class="fa-brands fa-java fs-1 text-danger mb-3 service-icon"></i>
+          <h5 class="fw-bold">Backend Development</h5>
+          <p>Java Spring Boot, MySQL, REST APIs, and CRUD systems with role-based auth.</p>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1400">
+        <div class="card service-card bg-dark text-light shadow-lg rounded-4 p-4 h-100">
+          <i class="fa-solid fa-mobile-screen-button fs-1 text-danger mb-3 service-icon"></i>
+          <h5 class="fw-bold">Mobile Apps</h5>
+          <p>React Native / hybrid mobile apps with responsive design and seamless UX.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+  /* Service Card Hover */
+  .service-card {
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+  }
+  .service-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    border: 2px solid #dc3545; /* Red glow */
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.5);
+  }
+
+  /* Icon Animation */
+  .service-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  .service-card:hover .service-icon {
+    transform: scale(1.2) rotate(8deg);
+    color: #ff4d6d;
+    text-shadow: 0 0 15px #ff4d6d;
+  }
+
+  /* Card Title Glow */
+  .service-card h5 {
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  .service-card:hover h5 {
+    color: #ff4d6d;
+    text-shadow: 0 0 10px #ff4d6d;
+  }
+</style>
+
+
+
+
+<!--Services section end-->
+
+<!--Resume section start-->
+
+
+<!-- Resume Section -->
+<section id="resume" class="section text-light" style="background-color: #111111; position: relative; overflow: hidden;">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <header class="text-center mb-5">
+      <h2 class="fw-bold text-danger section-title" data-aos="fade-down" data-aos-duration="1000">
+        Resume
+      </h2>
+      <p class="mt-3" data-aos="fade-up" data-aos-duration="1200">
+        My education and professional journey so far 🚀
+      </p>
+    </header>
+
+    <div class="row justify-content-center">
+      
+      <!-- Education -->
+      <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-right" data-aos-duration="1000">
+        <article class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body">
+            <h3 class="card-title text-danger fw-bold mb-4">Education</h3>
+
+            <div class="mb-4">
+              <h4 class="fw-bold h6">B.Tech in Computer Science & Engineering</h4>
+              <time class="text-danger d-block mb-1">2022 – 2026</time>
+              <p class="mb-1"><em>Integral University, Lucknow</em></p>
+              <p>Currently pursuing with focus on 
+                <strong class="text-danger">Backend Development, Databases, Java & Spring Boot</strong>.
+              </p>
+            </div>
+
+            <div>
+              <h4 class="fw-bold h6">Higher Secondary Education</h4>
+              <time class="text-danger d-block mb-1">2020 – 2022</time>
+              <p class="mb-1"><em>Bright Career S.S Inter College</em></p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Experience -->
+      <div class="col-md-6 col-lg-6 mb-4" data-aos="fade-left" data-aos-duration="1000">
+        <article class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body">
+            <h3 class="card-title text-danger fw-bold mb-4">Experience</h3>
+
+            <!-- Softpro Internship -->
+            <div class="mb-4">
+              <h4 class="fw-bold h6">Software Developer Intern</h4>
+              <time class="text-danger d-block mb-1">2024</time>
+              <p class="mb-1"><em>Softpro India</em></p>
+              <ul>
+                <li>Worked as a <strong class="text-danger">Full Stack Developer Intern</strong>.</li>
+                <li>Developed full-stack applications using <strong class="text-danger">Java, Spring Boot, MySQL</strong>.</li>
+                <li>Designed responsive websites and integrated backend APIs.</li>
+                <li>Hands-on experience in <strong class="text-danger">end-to-end project lifecycle</strong>.</li>
+              </ul>
+            </div>
+
+            <!-- CodSoft Internship -->
+            <div class="mb-4">
+              <h4 class="fw-bold h6">Java Developer Intern</h4>
+              <time class="text-danger d-block mb-1">2025</time>
+              <p class="mb-1"><em>CodSoft Virtual Internship</em></p>
+              <ul>
+                <li>Built Java-based apps like Student Grade Calculator & ATM Interface.</li>
+                <li>Implemented error handling, logging, and database operations.</li>
+                <li>Worked with <strong class="text-danger">Java</strong> for backend systems.</li>
+              </ul>
+            </div>
+
+            
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <!-- Download Resume Button -->
+    <div class="text-center mt-4" data-aos="zoom-in" data-aos-duration="1200">
+      <a href="Ubaid Rehman Resume.pdf" 
+         class="btn btn-outline-danger px-4 py-2 shadow-sm resume-btn" 
+         target="_blank" 
+         aria-label="Download Ubaid Rehman Resume">
+        <i class="bi bi-file-earmark-text"></i> Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Custom CSS -->
+<style>
+  /* Section Title Underline Glow */
+  .section-title {
+    border-bottom: 2px solid #dc3545;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+  }
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: #dc3545;
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.8);
+    border-radius: 2px;
+  }
+
+  /* Resume Button Glow */
+  .resume-btn {
+    transition: all 0.3s ease;
+    border: 2px solid #dc3545;
+    font-weight: 600;
+  }
+  .resume-btn:hover {
+    background: #dc3545;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(220, 53, 69, 0.6);
+    transform: scale(1.05);
+  }
+
+  /* Card Hover Animation */
+  #resume .card {
+    transition: all 0.4s ease;
+  }
+  #resume .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(220, 53, 69, 0.6);
+  }
+</style>
+
+
+
+
+
+
+<!--Resume section end-->
+
+<!--pricing section start-->
+
+<section id="pricing" class="section text-light" style="background-color: #111111;">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-danger" style="border-bottom: 2px solid #dc3545; display: inline-block;">PRICING</h1>
+      <p class="mt-3">Flexible plans to fit your needs 💻🚀</p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div class="row justify-content-center">
+
+      <!-- Basic Plan -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger fw-bold">Basic</h5>
+            <h2 class="fw-bold mb-3">₹4,999</h2>
+            <p class="mb-4">Perfect for individuals & small portfolios</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="fa-solid fa-check text-danger me-2"></i>1 Page Portfolio</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Responsive Design</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>SEO Optimized</li>
+              <li><i class="fa-solid fa-xmark text-secondary me-2"></i>Advanced Features</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-danger fw-semibold mt-3">Get Started</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Standard Plan -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger fw-bold">Standard</h5>
+            <h2 class="fw-bold mb-3">₹9,999</h2>
+            <p class="mb-4">Great for startups & small businesses</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Up to 5 Pages</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Responsive + SEO</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Basic Backend</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Contact Form Integration</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-danger fw-semibold mt-3">Choose Plan</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Premium Plan -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title text-danger fw-bold">Premium</h5>
+            <h2 class="fw-bold mb-3">₹14,999</h2>
+            <p class="mb-4">For professional & enterprise solutions</p>
+            <ul class="list-unstyled text-start">
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Unlimited Pages</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Full Stack Features</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Database Integration</li>
+              <li><i class="fa-solid fa-check text-danger me-2"></i>Advanced Security</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline-danger fw-semibold mt-3">Go Premium</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!--pricing section end-->
+
+<!-- Projects Section Start -->
+<section class="section text-light" id="projects" style="background-color: #111111;">
+  <div class="container">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-danger" style="border-bottom: 2px solid #dc3545; display: inline-block;">
+        PROJECTS
+      </h1>
+      <p class="mt-3">Here are some of the personal, academic, and client-based projects I’ve created — each with its own tech stack and story 🚀</p>
+    </div>
+
+    <!-- Project Cards -->
+    <div class="row justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/testiva.jpg" class="card-img-top rounded-top" alt="Testiva Admin Panel Project" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">Testiva Admin Panel</h5>
+            <p class="card-text">A Spring Boot + Thymeleaf app with full CRUD, filtering, role management, and dynamic question bank. Built with modular architecture and responsive UI.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/quizApp.jpg" class="card-img-top rounded-top" alt="Interactive Quiz App" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">Interactive Quiz App</h5>
+            <p class="card-text">Built with Java, HTML, CSS, and JS — features include timed quizzes, live scoring, and responsive design optimized for mobile and desktop.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Explore Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/crudDashboard.jpg" class="card-img-top rounded-top" alt="CRUD Dashboard" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">CRUD Dashboard</h5>
+            <p class="card-text">A full-stack dashboard designed with clear tables, delete/edit buttons, and role-based views. Engineered for performance and clean aesthetics.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Check Features</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/Matrimonial.png" class="card-img-top rounded-top" alt="Matrimonial Website" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">Matrimonial Website</h5>
+            <p class="card-text">Developed a responsive matrimonial website using <span class="text-danger">HTML, CSS, JS, and Bootstrap</span>. Focused on UI/UX with modern forms, profile layouts, and clean navigation.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Preview</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/job.png" class="card-img-top rounded-top" alt="Job Portal Website" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">Job Portal Website</h5>
+            <p class="card-text">Built a modern job portal front-end using <span class="text-danger">HTML, CSS, JS, and Bootstrap</span>. Includes job listings, search filters, and responsive UI.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Preview</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="1000">
+        <div class="card bg-dark text-light border-0 shadow-lg rounded-4 h-100">
+          <img src="images/College.png" class="card-img-top rounded-top" alt="College Website" style="height: 220px; object-fit: cover;">
+          <div class="card-body">
+            <h5 class="card-title text-danger fw-bold">College Website</h5>
+            <p class="card-text">Designed a responsive college website using <span class="text-danger">HTML, CSS, JS, and Bootstrap</span>. Focused on showcasing campus, departments, and student resources.</p>
+            <a href="#" class="btn btn-outline-danger btn-sm">Preview</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section End -->
+
+<!-- Testimonials Section Start -->
+<section class="section text-light" id="testimonials" style="background-color: #111111;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-danger" style="border-bottom: 2px solid #dc3545; display: inline-block;">TESTIMONIALS</h1>
+      <p class="mt-3 text-light">Here’s what people have said about working with me.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <!-- Card 1 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-light border-0 shadow rounded-4 h-100">
+          <div class="card-body">
+            <p class="fst-italic">"Ubaid is a brilliant developer with a sharp eye for design. His attention to detail and dedication made our project a success."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="images/Aman-Sharma-_Co-Founder-CTO_verum-Legal.jpg" alt="Client 1" class="rounded-circle" style="height: 50px; width: 50px; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0 text-danger">Aman Sharma</h6>
+                <small class="text-secondary">UI/UX Designer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-light border-0 shadow rounded-4 h-100">
+          <div class="card-body">
+            <p class="fst-italic">"He brings full-stack functionality with professionalism. Communication was smooth and deadlines were respected throughout."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="images/30220BL-61614_1024x.webp" alt="Client 2" class="rounded-circle" style="height: 50px; width: 50px; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0 text-danger">Ritika Verma</h6>
+                <small class="text-secondary">Software Engineer</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-6 col-lg-4">
+        <div class="card bg-dark text-light border-0 shadow rounded-4 h-100">
+          <div class="card-body">
+            <p class="fst-italic">"From concept to deployment, Ubaid handled everything with finesse. The final product exceeded expectations."</p>
+            <div class="d-flex align-items-center mt-4">
+              <img src="images/channels4_profile.jpg" alt="Client 3" class="rounded-circle" style="height: 50px; width: 50px; object-fit: cover;">
+              <div class="ms-3">
+                <h6 class="mb-0 text-danger">Dev Mehta</h6>
+                <small class="text-secondary">Project Manager</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section Start -->
+<section class="section text-light" id="contact" style="background-color: #111111;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="fw-bold text-danger" style="border-bottom: 2px solid #dc3545; display: inline-block;">CONTACT US</h1>
+      <p class="mt-3 text-light">Let’s connect! Fill the form below and I’ll reach out shortly.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card bg-dark text-light border-0 shadow-lg p-4 rounded-4">
+          <form class="needs-validation" novalidate>
+            <!-- Name -->
+            <div class="mb-3">
+              <label class="form-label text-light fw-semibold"><i class="fa-solid fa-user me-2 text-danger"></i>Full Name</label>
+              <input type="text" class="form-control bg-dark text-light"     placeholder="Please Enter Your Name" required>
+              
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label class="form-label text-light fw-semibold"><i class="fa-solid fa-envelope text-danger me-2"></i>Email</label>
+              <input type="email" class="form-control bg-dark text-light" placeholder="Enter Your Email" required>
+              
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label class="form-label text-light fw-semibold"><i class="fa-solid fa-phone me-2 text-danger"></i>Phone Number</label>
+              <input type="tel" class="form-control bg-dark text-light" placeholder="+91 ..." required>
+             
+            </div>
+
+           
+
+            <!-- Message -->
+            <div class="mb-3">
+              <label class="form-label text-light fw-semibold"><i class="fa-solid fa-message me-2 text-danger"></i>Message</label>
+              <textarea class="form-control bg-dark text-light" rows="4" placeholder="Type your message..." required></textarea>
+             
+            </div>
+
+            <!-- Submit -->
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-danger fw-bold">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Footer Section Start -->
+<footer class="bg-black text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+
+      <!-- Left Info -->
+      <div class="col-md-6 text-center text-md-start">
+        <h3 class="fw-bold text-danger">Ubaid Rehman</h3>
+        <p class="mb-0 mt-3">A Full Stack Developer crafting responsive and scalable web solutions with precision and passion.</p>
+      </div>
+
+      <!-- Right Social Icons -->
+      <div class="col-md-6 text-center text-md-end">
+        <h5 class="fw-bold text-danger mb-3">Connect With Me</h5>
+        <a href="https://www.linkedin.com/feed/" class="me-3 text-light"><i class="fa-brands fa-linkedin-in fs-4"></i></a>
+        <a href="https://github.com/Ubaidrehman007" class="me-3 text-light"><i class="fa-brands fa-github fs-4"></i></a>
+        <a href="#" class="text-light"><i class="fa-brands fa-instagram fs-4"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Divider & Copyright -->
+    <hr class="text-secondary mt-4">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0">&copy; 2024 <span class="text-danger">Ubaid Rehman</span>. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  AOS.init();
+
+</script>
+<script>
+  const fullText = "Full Stack Developer";
+  const typedTextElement = document.getElementById("typed-text");
+  let index = 0;
+
+  function typeText() {
+    if (index < fullText.length) {
+      typedTextElement.textContent += fullText.charAt(index);
+      index++;
+      setTimeout(typeText, 150); // typing speed (ms)
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", typeText);
+</script>
+
+
+
+
+</div>
+</body>
+</html>
