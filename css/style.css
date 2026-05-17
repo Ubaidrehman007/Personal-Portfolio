@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .nav-link:hover
 {
     color: #dc3545 !important;
@@ -40,3 +41,47 @@ body {
 
 
 
+=======
+.nav-link:hover
+{
+    color: #dc3545 !important;
+}
+
+.section img {
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+::placeholder {
+  color: #ffffff !important;
+  opacity: 0.7;
+}
+
+:-ms-input-placeholder {
+  color: #ffffff !important;
+}
+
+::-ms-input-placeholder {
+  color: #ffffff !important;
+}
+footer a:hover i {
+  color: #dc3545 !important;
+  transition: 0.3s ease;
+}
+
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4f8;
+}
+
+
+
+
+
+
+
+>>>>>>> c899ece0ef68f7a304a8959cd425abd6ed1eab82
