@@ -6,6 +6,8 @@ import Engineering from "./components/sections/Engineering";
 import Architecture from "./components/sections/Architecture";
 import Research from "./components/sections/Research";
 import About from "./components/sections/About";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/layout/Footer";
 
 export default function App() {
   return (
@@ -33,6 +35,11 @@ export default function App() {
 
       {/* About */}
       <About />
+
+      {/* Contact */}
+      <Contact />
+      {/* Footer */}
+      <Footer />
     </main>
   );
 }
