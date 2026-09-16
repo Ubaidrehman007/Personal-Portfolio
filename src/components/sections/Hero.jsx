@@ -358,7 +358,7 @@ export default function Hero() {
 
                   {/* Photo */}
                   <img
-                    src="/ubaid-profile.jpg"
+                    src="https://ubaidrehman007.github.io/Personal-Portfolio/ubaid-profile.jpg"
                     alt="Ubaid Rehman — Full-Stack Java Engineer"
                     width="800"
                     height="800"

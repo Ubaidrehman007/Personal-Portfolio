@@ -47,6 +47,9 @@ const profileStats = [
 ];
 
 export default function About() {
+  const resumeUrl =
+    "https://ubaidrehman007.github.io/Personal-Portfolio/Ubaid_Rehman_Resume.pdf";
+
   return (
     <section id="about" className="relative px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -310,7 +313,7 @@ export default function About() {
           </div>
 
           <a
-            href="/Ubaid_Rehman_Resume.pdf"
+            href={resumeUrl}
             target="_blank"
             rel="noreferrer"
             className="group inline-flex shrink-0 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-3 font-mono text-xs text-zinc-300 transition-all hover:border-cyan-400/30 hover:text-cyan-300"

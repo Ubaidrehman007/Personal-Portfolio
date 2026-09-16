@@ -22,7 +22,8 @@ const githubUrl = "https://github.com/Ubaidrehman007";
 
 const linkedinUrl = "https://www.linkedin.com/in/ubaid-rehman-9a5470269/";
 
-const resumeUrl = "/Ubaid_Rehman_Resume.pdf";
+const resumeUrl =
+  "https://ubaidrehman007.github.io/Personal-Portfolio/Ubaid_Rehman_Resume.pdf";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
