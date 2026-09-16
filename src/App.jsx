@@ -5,6 +5,7 @@ import Projects from "./components/sections/Projects";
 import Engineering from "./components/sections/Engineering";
 import Architecture from "./components/sections/Architecture";
 import Research from "./components/sections/Research";
+import About from "./components/sections/About";
 
 export default function App() {
   return (
@@ -29,6 +30,9 @@ export default function App() {
 
       {/* Research */}
       <Research />
+
+      {/* About */}
+      <About />
     </main>
   );
 }
