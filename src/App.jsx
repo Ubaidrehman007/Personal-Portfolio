@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
 import Engineering from "./components/sections/Engineering";
+import Architecture from "./components/sections/Architecture";
 
 export default function App() {
   return (
@@ -21,6 +22,9 @@ export default function App() {
 
       {/* Engineering */}
       <Engineering />
+
+      {/* Architecture */}
+      <Architecture />
     </main>
   );
 }
