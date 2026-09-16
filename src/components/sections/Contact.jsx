@@ -44,22 +44,25 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative px-4 py-24 sm:px-6 lg:px-8">
+    <section
+      id="contact"
+      className="relative px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+    >
       <div className="mx-auto max-w-7xl">
-        {/* HEADER */}
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-9 md:mb-10"
         >
           <div className="mb-4 flex items-center gap-3 font-mono text-xs tracking-[0.25em] text-cyan-400">
             <span className="h-px w-8 bg-cyan-400/60" />
             CONTACT // 06
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+          <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <h2 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl">
               Let&apos;s build something
               <span className="text-zinc-500"> useful.</span>
@@ -72,9 +75,9 @@ export default function Contact() {
           </div>
         </motion.div>
 
-        {/* MAIN CONTACT AREA */}
+        {/* Main Contact Area */}
         <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
-          {/* TERMINAL */}
+          {/* Terminal */}
           <motion.div
             initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -97,7 +100,7 @@ export default function Contact() {
             </div>
 
             {/* Terminal Body */}
-            <div className="p-6 sm:p-8">
+            <div className="p-5 sm:p-7">
               <div className="space-y-4 font-mono text-xs leading-6">
                 <div>
                   <span className="text-cyan-400">$</span>{" "}
@@ -112,10 +115,13 @@ export default function Contact() {
 
                 <div className="border-l border-white/10 pl-4 text-zinc-500">
                   <div>engineer&nbsp;&nbsp;: Ubaid Rehman</div>
+
                   <div>
                     focus&nbsp;&nbsp;&nbsp;&nbsp;: Java / Spring / Full Stack
                   </div>
+
                   <div>location&nbsp;&nbsp;: Lucknow, India</div>
+
                   <div>
                     status&nbsp;&nbsp;&nbsp;&nbsp;: open to opportunities
                   </div>
@@ -127,23 +133,23 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email Action */}
+              {/* Email */}
               <button
                 type="button"
                 onClick={copyEmail}
-                className="group mt-7 flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.025] p-4 text-left transition-all hover:border-cyan-400/30 hover:bg-cyan-400/[0.035]"
+                className="group mt-6 flex w-full items-center justify-between rounded-2xl border border-white/10 bg-white/[0.025] p-4 text-left transition-all hover:border-cyan-400/30 hover:bg-cyan-400/[0.035]"
               >
                 <div className="flex items-center gap-4">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/20 bg-cyan-400/[0.06] text-cyan-300">
                     {copied ? <Check size={17} /> : <Mail size={17} />}
                   </div>
 
-                  <div>
+                  <div className="min-w-0">
                     <div className="font-mono text-[9px] tracking-[0.18em] text-zinc-600">
                       PRIMARY_CHANNEL
                     </div>
 
-                    <div className="mt-1 text-sm text-zinc-300">
+                    <div className="mt-1 truncate text-sm text-zinc-300">
                       {copied ? "EMAIL COPIED" : email}
                     </div>
                   </div>
@@ -151,26 +157,26 @@ export default function Contact() {
 
                 <ArrowUpRight
                   size={16}
-                  className="text-zinc-600 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-300"
+                  className="shrink-0 text-zinc-600 transition-all group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-300"
                 />
               </button>
 
-              <div className="mt-6 flex items-center gap-2 font-mono text-[10px] text-zinc-600">
+              <div className="mt-5 flex items-center gap-2 font-mono text-[10px] text-zinc-600">
                 <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" />
                 READY TO RECEIVE CONNECTION
               </div>
             </div>
           </motion.div>
 
-          {/* CHANNELS */}
+          {/* Channels */}
           <motion.div
             initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.7 }}
-            className="rounded-3xl border border-white/10 bg-black/30 p-6 backdrop-blur-xl sm:p-8"
+            className="rounded-3xl border border-white/10 bg-black/30 p-5 backdrop-blur-xl sm:p-7"
           >
-            <div className="mb-7 flex items-center justify-between border-b border-white/10 pb-4">
+            <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
               <span className="font-mono text-[10px] tracking-[0.2em] text-zinc-500">
                 AVAILABLE_CHANNELS
               </span>
@@ -222,8 +228,8 @@ export default function Contact() {
               })}
             </div>
 
-            {/* What to contact for */}
-            <div className="mt-8 rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.025] p-5">
+            {/* Reasons */}
+            <div className="mt-7 rounded-2xl border border-cyan-400/10 bg-cyan-400/[0.025] p-5">
               <div className="mb-4 font-mono text-[9px] tracking-[0.18em] text-cyan-400">
                 GOOD_REASONS_TO_CONNECT
               </div>
@@ -248,13 +254,13 @@ export default function Contact() {
           </motion.div>
         </div>
 
-        {/* FINAL CTA */}
+        {/* Final CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="mt-12 text-center"
+          className="mt-9 text-center"
         >
           <div className="font-mono text-[10px] tracking-[0.25em] text-zinc-700">
             CONNECTION_STATUS

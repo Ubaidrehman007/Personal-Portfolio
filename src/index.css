@@ -16,6 +16,7 @@
 html {
   scroll-behavior: smooth;
   background: #05070b;
+  scroll-padding-top: 110px;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   min-height: 100vh;
   background: #05070b;
   overflow-x: hidden;
+  padding: 0px;
 }
 
 button,

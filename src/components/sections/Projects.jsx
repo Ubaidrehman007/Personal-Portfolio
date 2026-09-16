@@ -25,11 +25,13 @@ function CapabilityIcon({ index }) {
 
 export default function Projects() {
   const featuredProject = projects.find((project) => project.featured);
-
   const secondaryProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="systems" className="relative z-10 px-6 py-28 md:py-36">
+    <section
+      id="systems"
+      className="relative z-10 px-5 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <motion.div
@@ -37,7 +39,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-14"
+          className="mb-9 md:mb-10"
         >
           <div className="mb-4 flex items-center gap-3">
             <span className="font-mono text-[10px] tracking-[0.3em] text-cyan-400">
@@ -47,14 +49,14 @@ export default function Projects() {
             <span className="h-px w-12 bg-cyan-400/30" />
           </div>
 
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <h2 className="font-display text-4xl font-bold tracking-tight text-white md:text-6xl">
                 Selected
                 <span className="text-zinc-600"> Systems.</span>
               </h2>
 
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-500 md:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-500 md:text-base">
                 Production applications, backend architectures, and
                 client-facing experiences I've designed and built.
               </p>
@@ -66,10 +68,7 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        {/* =========================
-            FEATURED PROJECT
-        ========================== */}
-
+        {/* Featured Project */}
         {featuredProject && (
           <motion.article
             initial={{ opacity: 0, y: 35 }}
@@ -104,7 +103,7 @@ export default function Projects() {
             {/* Main Content */}
             <div className="grid lg:grid-cols-[1fr_0.9fr]">
               {/* Left */}
-              <div className="border-b border-white/10 p-7 md:p-10 lg:border-b-0 lg:border-r">
+              <div className="border-b border-white/10 p-6 sm:p-7 md:p-9 lg:border-b-0 lg:border-r">
                 <p className="mb-3 font-mono text-[10px] tracking-[0.25em] text-cyan-400">
                   FLAGSHIP SYSTEM
                 </p>
@@ -117,12 +116,12 @@ export default function Projects() {
                   {featuredProject.subtitle}
                 </p>
 
-                <p className="mt-6 max-w-xl text-sm leading-7 text-zinc-400">
+                <p className="mt-5 max-w-xl text-sm leading-7 text-zinc-400">
                   {featuredProject.description}
                 </p>
 
                 {/* Stack */}
-                <div className="mt-7 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2">
                   {featuredProject.stack.map((tech) => (
                     <span
                       key={tech}
@@ -134,7 +133,7 @@ export default function Projects() {
                 </div>
 
                 {/* Buttons */}
-                <div className="mt-9 flex flex-wrap gap-3">
+                <div className="mt-7 flex flex-wrap gap-3">
                   <a
                     href={featuredProject.github}
                     target="_blank"
@@ -160,13 +159,12 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Right — System Visualization */}
-              <div className="relative overflow-hidden bg-white/[0.015] p-7 md:p-10">
-                {/* Decorative Grid */}
+              {/* Right */}
+              <div className="relative overflow-hidden bg-white/[0.015] p-6 sm:p-7 md:p-9">
                 <div className="pointer-events-none absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.025)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.025)_1px,transparent_1px)] [background-size:32px_32px]" />
 
                 <div className="relative">
-                  <div className="mb-7 flex items-center justify-between">
+                  <div className="mb-6 flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <FiLayers className="text-cyan-400" size={14} />
 
@@ -201,7 +199,7 @@ export default function Projects() {
                   </div>
 
                   {/* Mini Architecture */}
-                  <div className="mt-7 rounded-2xl border border-white/5 bg-black/20 p-5">
+                  <div className="mt-6 rounded-2xl border border-white/5 bg-black/20 p-4 sm:p-5">
                     <p className="mb-4 font-mono text-[9px] tracking-widest text-zinc-600">
                       CORE ARCHITECTURE
                     </p>
@@ -238,11 +236,8 @@ export default function Projects() {
           </motion.article>
         )}
 
-        {/* =========================
-            SECONDARY PROJECTS
-        ========================== */}
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
+        {/* Secondary Projects */}
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
           {secondaryProjects.map((project, index) => (
             <motion.article
               key={project.id}
@@ -254,9 +249,8 @@ export default function Projects() {
                 delay: index * 0.08,
               }}
               whileHover={{ y: -5 }}
-              className="group rounded-3xl border border-white/10 bg-[#080b10]/75 p-7 backdrop-blur-xl transition-colors hover:border-white/15 md:p-8"
+              className="group rounded-3xl border border-white/10 bg-[#080b10]/75 p-6 backdrop-blur-xl transition-colors hover:border-white/15 sm:p-7"
             >
-              {/* Header */}
               <div className="flex items-center justify-between">
                 <span className="font-mono text-[10px] text-zinc-600">
                   {project.number}
@@ -267,33 +261,29 @@ export default function Projects() {
                 </span>
               </div>
 
-              {/* Title */}
-              <h3 className="mt-8 font-display text-3xl font-bold text-white">
+              <h3 className="mt-6 font-display text-3xl font-bold text-white">
                 {project.title}
               </h3>
 
               <p className="mt-1 text-sm text-zinc-500">{project.subtitle}</p>
 
-              <p className="mt-5 text-sm leading-7 text-zinc-500">
+              <p className="mt-4 text-sm leading-7 text-zinc-500">
                 {project.description}
               </p>
 
-              {/* Capabilities */}
-              <div className="mt-6 space-y-2">
+              <div className="mt-5 space-y-2">
                 {project.capabilities.slice(0, 4).map((item) => (
                   <div
                     key={item}
                     className="flex items-start gap-2 text-xs text-zinc-500"
                   >
                     <span className="mt-1 text-cyan-400">▹</span>
-
                     <span>{item}</span>
                   </div>
                 ))}
               </div>
 
-              {/* Tech */}
-              <div className="mt-7 flex flex-wrap gap-1.5">
+              <div className="mt-6 flex flex-wrap gap-1.5">
                 {project.stack.map((tech) => (
                   <span
                     key={tech}
@@ -304,8 +294,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              {/* Links */}
-              <div className="mt-8 flex items-center gap-4 border-t border-white/10 pt-5">
+              <div className="mt-7 flex items-center gap-4 border-t border-white/10 pt-5">
                 <a
                   href={project.github}
                   target="_blank"
@@ -340,7 +329,7 @@ export default function Projects() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="mt-14 flex items-center gap-4"
+          className="mt-10 flex items-center gap-4"
         >
           <div className="h-px flex-1 bg-white/5" />
 

@@ -9,41 +9,16 @@ const categories = [
     icon: FiServer,
     description: "APIs, application logic & security",
     technologies: [
-      {
-        name: "Java",
-        detail: "Primary language",
-      },
-      {
-        name: "Spring Boot",
-        detail: "Application framework",
-      },
-      {
-        name: "Spring MVC",
-        detail: "Web architecture",
-      },
-      {
-        name: "Spring Security",
-        detail: "Authentication & authorization",
-      },
-      {
-        name: "Spring Data JPA",
-        detail: "Persistence layer",
-      },
-      {
-        name: "Hibernate",
-        detail: "ORM",
-      },
-      {
-        name: "JWT",
-        detail: "Token-based authentication",
-      },
-      {
-        name: "REST APIs",
-        detail: "Service communication",
-      },
+      { name: "Java", detail: "Primary language" },
+      { name: "Spring Boot", detail: "Application framework" },
+      { name: "Spring MVC", detail: "Web architecture" },
+      { name: "Spring Security", detail: "Authentication & authorization" },
+      { name: "Spring Data JPA", detail: "Persistence layer" },
+      { name: "Hibernate", detail: "ORM" },
+      { name: "JWT", detail: "Token-based authentication" },
+      { name: "REST APIs", detail: "Service communication" },
     ],
   },
-
   {
     id: "data",
     number: "02",
@@ -51,29 +26,13 @@ const categories = [
     icon: FiDatabase,
     description: "Relational & geospatial data systems",
     technologies: [
-      {
-        name: "PostgreSQL",
-        detail: "Primary relational database",
-      },
-      {
-        name: "PostGIS",
-        detail: "Geospatial data",
-      },
-      {
-        name: "MySQL",
-        detail: "Relational database",
-      },
-      {
-        name: "Hibernate Spatial",
-        detail: "Spatial ORM",
-      },
-      {
-        name: "SQL",
-        detail: "Data querying",
-      },
+      { name: "PostgreSQL", detail: "Primary relational database" },
+      { name: "PostGIS", detail: "Geospatial data" },
+      { name: "MySQL", detail: "Relational database" },
+      { name: "Hibernate Spatial", detail: "Spatial ORM" },
+      { name: "SQL", detail: "Data querying" },
     ],
   },
-
   {
     id: "frontend",
     number: "03",
@@ -81,29 +40,13 @@ const categories = [
     icon: FiGlobe,
     description: "Interfaces & client applications",
     technologies: [
-      {
-        name: "React",
-        detail: "Component-based UI",
-      },
-      {
-        name: "JavaScript",
-        detail: "Client-side logic",
-      },
-      {
-        name: "HTML5",
-        detail: "Semantic markup",
-      },
-      {
-        name: "CSS3",
-        detail: "Interface styling",
-      },
-      {
-        name: "Bootstrap",
-        detail: "Responsive UI",
-      },
+      { name: "React", detail: "Component-based UI" },
+      { name: "JavaScript", detail: "Client-side logic" },
+      { name: "HTML5", detail: "Semantic markup" },
+      { name: "CSS3", detail: "Interface styling" },
+      { name: "Bootstrap", detail: "Responsive UI" },
     ],
   },
-
   {
     id: "devops",
     number: "04",
@@ -111,34 +54,13 @@ const categories = [
     icon: FiTool,
     description: "Development, deployment & tooling",
     technologies: [
-      {
-        name: "Git",
-        detail: "Version control",
-      },
-      {
-        name: "GitHub",
-        detail: "Code collaboration",
-      },
-      {
-        name: "Docker",
-        detail: "Containerization",
-      },
-      {
-        name: "Docker Compose",
-        detail: "Local orchestration",
-      },
-      {
-        name: "Maven",
-        detail: "Build automation",
-      },
-      {
-        name: "Flyway",
-        detail: "Database migrations",
-      },
-      {
-        name: "Nginx",
-        detail: "Web server / reverse proxy",
-      },
+      { name: "Git", detail: "Version control" },
+      { name: "GitHub", detail: "Code collaboration" },
+      { name: "Docker", detail: "Containerization" },
+      { name: "Docker Compose", detail: "Local orchestration" },
+      { name: "Maven", detail: "Build automation" },
+      { name: "Flyway", detail: "Database migrations" },
+      { name: "Nginx", detail: "Web server / reverse proxy" },
     ],
   },
 ];
@@ -154,7 +76,7 @@ function Technology({ technology, index }) {
         delay: index * 0.035,
       }}
       whileHover={{ x: 5 }}
-      className="group flex items-center justify-between gap-4 border-b border-white/5 py-3 last:border-0"
+      className="group flex items-center justify-between gap-4 border-b border-white/5 py-2.5 last:border-0 sm:py-3"
     >
       <div className="flex min-w-0 items-center gap-3">
         <span className="font-mono text-[8px] text-zinc-700">
@@ -175,7 +97,10 @@ function Technology({ technology, index }) {
 
 export default function Engineering() {
   return (
-    <section id="engineering" className="relative z-10 px-6 py-28 md:py-36">
+    <section
+      id="engineering"
+      className="relative z-10 px-5 py-16 sm:px-6 sm:py-20 md:py-24 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         {/* Header */}
         <motion.div
@@ -183,7 +108,7 @@ export default function Engineering() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="mb-14"
+          className="mb-9 md:mb-10"
         >
           <div className="mb-4 flex items-center gap-3">
             <span className="font-mono text-[10px] tracking-[0.3em] text-cyan-400">
@@ -193,14 +118,14 @@ export default function Engineering() {
             <span className="h-px w-12 bg-cyan-400/30" />
           </div>
 
-          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+          <div className="flex flex-col justify-between gap-4 md:flex-row md:items-end">
             <div>
               <h2 className="font-display text-4xl font-bold tracking-tight text-white md:text-6xl">
                 Engineering
                 <span className="text-zinc-600"> Stack.</span>
               </h2>
 
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-zinc-500 md:text-base">
+              <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-500 md:text-base">
                 The technologies I use to design, build, secure and deploy
                 full-stack applications.
               </p>
@@ -228,9 +153,8 @@ export default function Engineering() {
                   duration: 0.6,
                   delay: categoryIndex * 0.08,
                 }}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#080b10]/75 p-6 backdrop-blur-xl md:p-7"
+                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#080b10]/75 p-5 backdrop-blur-xl sm:p-6 md:p-7"
               >
-                {/* Decorative glow */}
                 <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-cyan-400/5 blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
 
                 {/* Header */}
@@ -277,15 +201,15 @@ export default function Engineering() {
           })}
         </div>
 
-        {/* Engineering principles */}
+        {/* Engineering Principles */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-6 rounded-3xl border border-white/10 bg-[#080b10]/60 p-6 backdrop-blur-xl md:p-8"
+          className="mt-5 rounded-3xl border border-white/10 bg-[#080b10]/60 p-5 backdrop-blur-xl sm:p-6 md:p-7"
         >
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-3">
             <div>
               <p className="font-mono text-[9px] tracking-widest text-cyan-400">
                 PRINCIPLE // 01
